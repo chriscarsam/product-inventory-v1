@@ -7,12 +7,20 @@
     <title>Listado de usuarios - SambCode</title>
 </head>
 <body>
-    <h1><?php echo e($title) ?></h1>
-
+    <h1>{{ $title }}</h1>
+    <hr>
     <ul>
-        <?php foreach ($users as $user): ?>
-            <li><?php echo e($user) ?></li>
-        <?php endforeach; ?>
+        @foreach ($users as $user)
+            <li>{{ $user }}</li>
+        @endforeach
     </ul>
+   
+    @forelse ($users as $user)
+        <li>{{ $user }}</li>
+    @empty
+        <li>No hay usuarios registrados</li>
+    @endforelse
+
+
 </body>
 </html>
