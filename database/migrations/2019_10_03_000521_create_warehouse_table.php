@@ -16,13 +16,13 @@ class CreateWarehouseTable extends Migration
         Schema::create('warehouse', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('name',45);
+            $table->string('name',45)->unique();
             $table->string('address',255);
             $table->string('document',13);
             $table->string('phone',13);
             $table->string('cellPhone',13);
             $table->string('email',255);
-            $table->date('registrationDate');
+            $table->dateTime('registrationDate');
 
             $table->timestamps();
         });

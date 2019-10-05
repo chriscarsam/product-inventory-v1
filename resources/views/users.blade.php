@@ -17,5 +17,14 @@
     @endforelse
     </ul>   
 
+
+    <?php
+   
+    date_default_timezone_set("America/Guayaquil");
+$today = date( 'D M Y'); 
+print_r($today);
+echo "<br>";
+echo date_default_timezone_get();
+?>
 </body>
 </html>

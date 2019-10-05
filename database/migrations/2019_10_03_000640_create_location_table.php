@@ -16,7 +16,7 @@ class CreateLocationTable extends Migration
         Schema::create('location', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('shelving',45)->nullable();
+            $table->string('shelving',45)->unique();
             $table->string('nivel',45)->nullable();
             $table->string('floor',45)->nullable();
 

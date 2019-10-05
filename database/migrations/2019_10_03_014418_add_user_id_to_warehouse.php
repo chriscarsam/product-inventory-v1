@@ -14,7 +14,7 @@ class AddUserIdToWarehouse extends Migration
     public function up()
     {
         Schema::table('warehouse', function(Blueprint $table){
-            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
