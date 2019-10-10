@@ -10,9 +10,8 @@ class WarehouseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        date_default_timezone_set("America/Guayaquil");
-        
+    {  
+                
         DB::table('warehouse')->insert([
            'name' => 'Almacen 1',
            'address' => 'Guamani',
@@ -20,7 +19,8 @@ class WarehouseSeeder extends Seeder
            'phone' => '02245781524',
            'cellPhone' => '09842567814',
            'email' => 'almacen@gmail.com',
-           'registrationDate' => NOW(),           
+           'registrationDate' => NOW(),
+           'user_id' => DB::table('users')->whereEmail('chris@gmail.com')->value('id'),           
         ]);        
 
         DB::table('warehouse')->insert([
@@ -30,7 +30,19 @@ class WarehouseSeeder extends Seeder
             'phone' => '02285781524',
             'cellPhone' => '09848967814',
             'email' => 'almacen_two@gmail.com',
-            'registrationDate' => NOW(),           
+            'registrationDate' => NOW(),   
+            'user_id' => DB::table('users')->whereEmail('carlos@gmail.com')->value('id'),        
+         ]);
+
+         DB::table('warehouse')->insert([
+             'name' => 'Almacen 3',
+             'address' => 'La Villa Flora',
+             'document' => '1284597841001',
+             'phone' => '023548924',
+             'cellPhone' => '0985162485',
+             'email' => 'almacen_three@gmeil.com',
+             'registrationDate' => NOW(),
+             'user_id' => DB::table('users')->whereEmail('daniel@yahoo.com')->value('id'),
          ]);
     }
 }

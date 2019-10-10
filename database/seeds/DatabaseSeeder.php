@@ -11,15 +11,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        date_default_timezone_set("America/Guayaquil");
         
         $this->truncateTables([
+            'professions', 
+            'users',
             'category',
-            'warehouse',         
+            'warehouse',                 
         ]);
 
         // $this->call(UsersTableSeeder::class);
+        $this->call(ProfessioSeeder::class);
+        $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
-        $this->call(WarehouseSeeder::class);
+        $this->call(WarehouseSeeder::class);        
         
     }
 
