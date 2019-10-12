@@ -13,7 +13,7 @@ class WarehouseSeeder extends Seeder
     {  
                 
         DB::table('warehouse')->insert([
-           'name' => 'Almacen 1',
+           'name' => 'Almacen1',
            'address' => 'Guamani',
            'document' => '1234567891001',
            'phone' => '02245781524',
@@ -24,7 +24,7 @@ class WarehouseSeeder extends Seeder
         ]);        
 
         DB::table('warehouse')->insert([
-            'name' => 'Almacen 2',
+            'name' => 'Almacen2',
             'address' => 'La Marin',
             'document' => '1958567891001',
             'phone' => '02285781524',
@@ -35,7 +35,7 @@ class WarehouseSeeder extends Seeder
          ]);
 
          DB::table('warehouse')->insert([
-             'name' => 'Almacen 3',
+             'name' => 'Almacen3',
              'address' => 'La Villa Flora',
              'document' => '1284597841001',
              'phone' => '023548924',

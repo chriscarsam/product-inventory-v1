@@ -17,7 +17,7 @@ class CreateUnitTable extends Migration
             $table->increments('id');
 
             $table->string('name',45)->unique();
-            $table->string('description',255);
+            $table->string('description',255)->nullable();
 
             $table->timestamps();
         });

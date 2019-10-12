@@ -17,7 +17,7 @@ class CreateLocationTable extends Migration
             $table->increments('id');
 
             $table->string('shelving',45)->unique();
-            $table->string('nivel',45)->nullable();
+            $table->string('level',45)->nullable();
             $table->string('floor',45)->nullable();
 
             $table->timestamps();

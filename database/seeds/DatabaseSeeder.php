@@ -17,15 +17,22 @@ class DatabaseSeeder extends Seeder
             'professions', 
             'users',
             'category',
-            'warehouse',                 
+            'warehouse',
+            'location',
+            'brand',
+            'unit',            
+            'product'        
         ]);
 
         // $this->call(UsersTableSeeder::class);
         $this->call(ProfessioSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
-        $this->call(WarehouseSeeder::class);        
-        
+        $this->call(WarehouseSeeder::class);  
+        $this->call(LocationSeeder::class);      
+        $this->call(BrandSeeder::class);
+        $this->call(UnitSeeder::class);        
+        $this->call(ProductSeeder::class);
     }
 
     protected function truncateTables(array $tables)
